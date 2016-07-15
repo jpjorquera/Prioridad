@@ -1,6 +1,6 @@
 # Prioridad Académica
 
-Programa pa calcular la priod¡ridad académica USM :D  
+Programa pa calcular la prioridad académica USM :D  
   
 FORMATO INPUT (.txt):  
 Cantidad semestres  
