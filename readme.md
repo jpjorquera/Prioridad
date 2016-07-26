@@ -2,6 +2,7 @@
 
 Programa pa calcular la prioridad académica USM :D  
 Se asume nota de aprobación 55.
+En caso de deportivos asignar nota como -1.
   
 FORMATO INPUT (.txt):  
 Cantidad semestres  
