@@ -3,7 +3,8 @@
 
 int main(){				// Descomentar para ingresar datos desde consola
 	float nSemestres;
-	unsigned short creditos = 1, grade;
+	unsigned short creditos = 1;
+	short grade;
 	//printf("Cantidad de semestres activos?\n");
 	scanf("%f", &nSemestres);
 	unsigned int sum = 0;
@@ -16,10 +17,15 @@ int main(){				// Descomentar para ingresar datos desde consola
 			break;
 		}
 		//printf("Ingrese la nota final de dicha asignatura\n");
-		scanf("%hu", &grade);
-		sum += creditos * grade;
-		if (grade>=55){			// Asume nota de aprobacion 55
+		scanf("%hd", &grade);
+		if (grade == -1){			// Deportivos
 			cred_a += creditos;
+		}
+		else {
+			sum += creditos * grade;
+			if (grade>=55){			// Asume nota de aprobacion 55
+				cred_a += creditos;
+			}
 		}
 		cred_t += creditos;
 	}
