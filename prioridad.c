@@ -19,7 +19,6 @@ int main(){				// Descomentar para ingresar datos desde consola
 		//printf("Ingrese la nota final de dicha asignatura\n");
 		scanf("%hd", &grade);
 		if (grade == -1){			// Deportivos
-			printf("depor\n");
 			cred_a += creditos;
 		}
 		else {
