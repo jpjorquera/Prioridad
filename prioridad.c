@@ -1,6 +1,20 @@
 #include <stdio.h>
 #include <math.h>		// If you can't compile, try with flag -lm
 
+double redondear(double  *n1){
+	double real, fraction, aux;
+	real = *n1;
+	real *= 1000;
+	fraction = modf(real, &aux);
+	real = aux / 1000;
+	fraction *= 10;
+	fraction = modf(fraction, &aux);
+	if (aux >= 5){
+		real += 0.001;
+	}
+	return real;
+}
+
 int main(){				// Descomentar para ingresar datos desde consola
 	double nSemestres;
 	unsigned short creditos = 1;
@@ -30,6 +44,7 @@ int main(){				// Descomentar para ingresar datos desde consola
 		cred_t += creditos;
 	}
 	pa = 100 *sum / (14 * pow(nSemestres, 1.06)) * (cred_a / cred_t);
+	pa = redondear(&pa);
 	printf("Su prioridad es: %lf \n", pa);
 	return 1;
 }
